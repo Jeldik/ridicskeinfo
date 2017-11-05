@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+{% block keywords %}{{ keywords }}{% endblock %}
+{% block description %}{{ description }}{% endblock %}
+{% block title %}{{ title }}{% endblock %}
+{% block body %}
+    <h1>Mapa radarů v České republice</h1>
+    <p>Vítejte na stránkách! Podělte se s ostatními řidiči o informace, kde se měří rychlost. Učiníte tak vyplněním formuláře <a href="{{ path('reportPlace') }}">zde</a>.</p>
+
+    <h2 style="margin-top: 40px;">Kde se měří</h2>
+    <div id="map" class="img img-rounded"></div>
+    <table class="table table-striped " data-toggle="table" data-sort-name="city" data-sort-order="desc">
+        <thead>
+        <tr>
+            <th data-field="city" data-sortable="true"><span class="boldBlack">Obec</span></th>
+            <th data-field="district" data-sortable="true"><span class="boldBlack">Okres</span></th>
+            <th data-field="county" data-sortable="true"><span class="boldBlack">Kraj</span></th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for measurePlace in measurePlaces %}
+            <tr>
+                <td>{{ measurePlace.City }}</td>
+                <td>{{ measurePlace.District }}</td>
+                <td>{{ measurePlace.County }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <div class="help">
+        <p>Pomozte nám rozšířit databázi vyplněním <a href="{{ url('reportPlace') }}">formuláře</a>, nebo napište na adresu <a href="mailto:info@ridicskeinfo.cz">info@ridicskeinfo.cz</a>.
+        Děkujeme za spolupráci!</p>
+    </div>
+{% endblock %}

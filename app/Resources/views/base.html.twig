@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="description" content="{% block description %}{% endblock %}"/>
+    <meta name="keywords" content="{% block keywords %}{% endblock %}"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {# border-radius #}
+    <meta http-equiv="X-UA-Compatible" content="IE=10"/>
+
+    <title>{% block title %}{% endblock %}</title>
+    {% block stylesheets %}
+        {# Latest compiled and minified CSS  #}
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.1/bootstrap-table.min.css" rel="stylesheet"/>
+        {# Optional theme #}
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+              crossorigin="anonymous">
+
+        {# Own CSS #}
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}"/>
+
+        <link rel="icon" type="image/x-icon" href="{{ asset('img/favicongimp.png') }}"/>
+    {% endblock %}
+</head>
+<body onload="initMap()">
+<div class="container">
+    <div class="messages">
+        {% for message in app.flashes('notice') %}
+            <div class="alert alert-success">
+                {{ message }}
+            </div>
+        {% endfor %}
+
+        {% for label, messages in app.flashes(['warning', 'error']) %}
+            {% for message in messages %}
+                <div class="alert alert-{{ label }}">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        {% endfor %}
+    </div>
+    <header>
+        <div class="logoImg">
+            <a href={{ url('homepage') }}><img src="{{ asset('img/ridicskeInfoLogo.png') }}" alt="logo řidičské info cz"/></a>
+        </div>
+    </header>
+    <nav class="navbar navbar-default" role="navigation">
+        <ul class="nav navbar-nav">
+            <li><a href="{{ url('reportPlace') }}" title="Nahlásit místo"><strong>Nahlásit místo</strong></a></li>
+            <li><a href="{{ url('article') }}" title="Informace ze silnic"><strong>Informace ze silnic</strong></a></li>
+            <li><a href="{{ url('contact') }}" title="Kontakt"><strong>Kontakt</strong></a></li>
+        </ul>
+    </nav>
+    <br clear="both"/>
+    <div id="content">
+        {% block body %}{% endblock %}
+    </div>
+    <footer class="footer text-center myFooter">
+        Copyright © {{ "now"|date("Y") }} ŘidičskéInfo.cz. Všechna práva vyhrazena.</p>
+    </footer>
+</div>
+{% block javascripts %}
+    {# jquery #}
+    <script src="{{ asset('js/jquery-3.2.1.min.js') }}"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.1/bootstrap-table.min.js"></script>
+    {# Google Maps #}
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBZP1LP8gAal3_lsEdT9jEjoiaIiR9L664&callback=initMap&v=3.27" async defer></script>
+    <script src="{{ asset('js/map.js') }}"></script>
+    <!-- Google Analytics -->
+    <script src="{{ asset('js/googleAnalytics.js') }}"></script>
+    {# Own js #}
+    <script src="{{ asset('js/js.js') }}"></script>
+
+{% endblock %}
+
+
+</body>
+</html>

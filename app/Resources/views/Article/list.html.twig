@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ title }}{% endblock %}
+{% block body %}
+    <table>
+        {% for article in articles %}
+            <tr>
+                <td>
+                    <h2><a href="{{ path('article_detail', {'url': article.url}) }}"></a></h2>
+                    {{ article.description }}<br>
+                    <a href="{{ path('article_editor', {'url': article.url}) }}">Editovat</a>
+                    <a href="{{ path('remove_article', {'url': article.url}) }}">Odstranit</a>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

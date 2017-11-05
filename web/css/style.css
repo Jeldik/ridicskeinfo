@@ -1,0 +1,107 @@
+*{
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    font-family: Verdana;
+    font-size: 14px;
+}
+
+.message {
+    border: 1px solid #9DC2F8;
+    padding: 3px;
+}
+
+.logoImg {
+    padding: 2em;
+}
+
+/* Link */
+.navbar-default .navbar-nav > li > a {
+    color: rgb(210, 72, 0);
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    color: #6C6C6C;
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+    color: #6C6C6C;
+}
+
+.actived {
+    background: #ebebe0;
+    pointer-events: none;
+}
+
+h1 {
+    color: rgb(210, 72, 0);
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+h2 {
+    margin-bottom: 20px;
+    margin-top: 10px;
+    color: #6C6C6C;
+}
+
+#content {
+    min-height: 480px;
+}
+
+#map {
+    height: 600px;
+    width: 100%;
+    border: 1px solid #808080;
+    margin-bottom: 20px;
+}
+
+.myFooter {
+    margin: 30px;
+    font-size: 12px;
+}
+
+.well {
+    background-color: rgba(245, 245, 245, 0.4);
+}
+
+input.error, textarea.error { border: 1px solid red; }
+label.error { color: red; text-align: right; }
+
+.clear {
+    clear:both;
+}
+
+.boldBlack {
+    color: black;
+    font-weight: bold;
+}
+
+.help {
+    margin: 20px;
+}
+
+a {
+    color: #808080;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #808080;
+}
+
+
+
+
+
