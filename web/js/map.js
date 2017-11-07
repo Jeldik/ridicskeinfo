@@ -128,6 +128,66 @@ function initMap() {
         position: {lat: 50.058039, lng: 14.406759},
         map: map,
     });
+    var strahovskyTunelPraha = new google.maps.Marker({
+        position: {lat: 50.074728, lng: 14.394135},
+        map: map,
+    });
+    var strahovskyTunelPrahaZpet = new google.maps.Marker({
+        position: {lat: 50.080292, lng: 14.387262},
+        map: map,
+    });
+    var stresovickaPraha = new google.maps.Marker({
+        position: {lat: 50.092814, lng: 14.378888},
+        map: map,
+    });
+    var naDlouhemLanuPraha = new google.maps.Marker({
+        position: {lat: 50.095452, lng: 14.359671},
+        map: map,
+    });
+    var horomerickaPraha = new google.maps.Marker({
+        position: {lat: 50.104921, lng: 14.356585},
+        map: map,
+    });
+    var horomerickaPrahaZpet = new google.maps.Marker({
+        position: {lat: 50.105583, lng: 14.353960},
+        map: map,
+    });
+    var naOkrajiPraha = new google.maps.Marker({
+        position: {lat: 50.090271, lng: 14.344799},
+        map: map,
+    });
+    var libockaPraha = new google.maps.Marker({
+        position: {lat: 50.086212, lng: 14.330064},
+        map: map,
+    });
+    var libockaPrahaZpet = new google.maps.Marker({
+        position: {lat: 50.087401, lng: 14.329007},
+        map: map,
+    });
+    var evropskaPraha = new google.maps.Marker({
+        position: {lat: 50.092859, lng: 14.316840},
+        map: map,
+    });
+    var lipskaPraha = new google.maps.Marker({
+        position: {lat: 50.102452, lng: 14.294895},
+        map: map,
+    });
+    var lipskaPrahaZpet = new google.maps.Marker({
+        position: {lat: 50.104676, lng: 14.294137},
+        map: map,
+    });
+    var belohorskaPraha = new google.maps.Marker({
+        position: {lat: 50.075855, lng: 14.329816},
+        map: map,
+    });
+    var tunelMrazkovaPraha = new google.maps.Marker({
+        position: {lat: 50.065730, lng: 14.400613},
+        map: map,
+    });
+    var kZavodistiPraha = new google.maps.Marker({
+        position: {lat: 50.001728, lng: 14.395392},
+        map: map,
+    });
 
 
 }
