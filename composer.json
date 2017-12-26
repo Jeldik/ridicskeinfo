@@ -13,6 +13,7 @@
     },
     "require": {
         "php": ">=5.5.9",
+        "andres-montanez/magallanes": "3.0",
         "doctrine/doctrine-bundle": "^1.6",
         "doctrine/orm": "^2.5",
         "egeloen/ckeditor-bundle": "^4.0",
@@ -25,11 +26,18 @@
         "symfony/swiftmailer-bundle": "^2.3.10",
         "symfony/symfony": "3.3.*",
         "twig/twig": "^1.0||^2.0",
+<<<<<<< HEAD
         "andres-montanez/magallanes": "^3.0"
     },
     "require-dev": {
         "deployer/deployer": "^3.3",
         "sensio/generator-bundle": "^3.0",
+=======
+        "sensio/generator-bundle": "^3.0"
+
+    },
+    "require-dev": {
+>>>>>>> 342c792221119ec030c9ecc9acf75f909473ad8c
         "symfony/phpunit-bridge": "^3.0"
     },
     "scripts": {
@@ -49,6 +57,7 @@
         ]
     },
     "config": {
+        "bin-dir": "bin",
         "platform": {
             "php": "5.5.9"
         },
